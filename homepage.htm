@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Project</title>
+    <!-- bootsrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- local styles -->
+    <link rel="stylesheet" href="css/teamStyles.css">
+</head>
+<body>
+    <section class="pageIntro">
+        
+        <ul class="siteNavBar">
+            <!--For current page link, put class="active" in <a> tag except for siteID-->
+            <li id="siteID"><a class="lightLink" id="active" href="homepage.htm">Home</a></li>
+            <!-- dropdown for perspectives options -->
+            <li><a class="lightLink" href="quiz.htm">Quiz</a></li>
+            <li>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Perspectives</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a class="lightLink" href="historical.htm">Historical</a>
+                        <a class="lightLink" href="transitional.htm">Transitional</a>
+                        <a class="lightLink" href="current.htm">Current</a>
+                        <a class="lightLink" href="future.htm">Future</a>
+                    </div>
+                </div>
+            </li>
+            <li><a class="lightLink" href="about.htm">About</a></li>
+        </ul>
+        
+        <section id="siteIntro">
+            <!-- use js to make this div element have a delayed load -->
+            <div class="contentBlockLong" id="introBlock">
+                <div id="output" class="output" style="display: none;"></div>
+                <span class="heading1">VR Technology</span>
+                <p>
+                    As the title implies, our project will be focusing on the progression of VR Technology, 
+                    from its first inception to present day. This includes the various products that utilize VR, 
+                    the development processes behind these products, and the significance of the creation and spread 
+                    of this technology. We will also touch upon some of the more popular examples such as the Oculus 
+                    Rift and the Meta Quest 2 to see what this technology could mean for the future. The portal will 
+                    predominantly feature the applications VR has and how they could be extended to other uses in the 
+                    future, such as product demonstrations and virtual tours.
+                </p>
+            </div>
+        </section>
+
+    </section>
+    
+    
+    <section class="containerBlue">
+        <div class="titleBlock">
+            <span class="heading1">Exploring Our Perspectives</span>
+        </div>
+        <br>
+        <section class="wrapper">
+            <div class="contentBlockWrapper">
+                <span class="blueText"><span class="heading2">Historical</span></span>
+                <p class="centerAlign">
+                    Learn about the hsitory of VR technology, from its inception to the precursors of what we know today.
+                </p>
+                <a href="historical.htm">
+                    <div class="linkBlockBlue">
+                        Learn More
+                    </div>
+                </a>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/wheatstone-mirror-stereoscope.jpg" alt="image of historical state">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <span class="blueText"><span class="heading2">Transitional</span></span>
+                <p class="centerAlign">
+                    Learn about the major changes that made VR Technology begin to change.
+                </p>
+                <a href="transitional.htm">
+                    <div class="linkBlockBlue">
+                        Learn More
+                    </div>
+                </a>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/ultimate-display-vr (1).jpg" alt="image of transitional state">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <span class="blueText"><span class="heading2">Current</span></span>
+                <p class="centerAlign">
+                    Learn about the current state of VR technology.
+                </p>
+                <a href="current.htm">
+                    <div class="linkBlockBlue">
+                        Learn More
+                    </div>
+                </a>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/current-state.jpg" alt="image of current state">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <span class="blueText"><span class="heading2">Future</span></span>
+                <p class="centerAlign">
+                    Learn about the future potential and current plans for VR technology.
+                </p>
+                <a href="future.htm">
+                    <div class="linkBlockBlue">
+                        Learn More
+                    </div>
+                </a>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/future-state.jpg" alt="image of future state">
+            </div>
+            
+        </section>
+
+    </section>
+
+    <section class="containerDark">
+        <div id="siteCredit">
+            <p>This website was <strong>independently built</strong> by Richard Camarillo, Jhayden Poole, Spencer Mctighe, and Adam Ashley.</p>
+        </div>
+
+        <footer>&copy; 2023 <span class="blueText">VR Technology</span></footer>
+
+    </section>
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- local script -->
+    <script src="js/ourScript.js"></script>
+</body>
+</html>

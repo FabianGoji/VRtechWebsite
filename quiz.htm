@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz for VR Technology</title>
+    <!-- boostrap styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- local styles -->
+    <link rel="stylesheet" href="css/teamStyles.css">
+     <!-- Chart.js -->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <section class="pageIntro">
+        
+        <ul class="siteNavBar">
+            <!--For current page link, put class="active" in <a> tag except for siteID-->
+            <li id="siteID"><a class="lightLink" href="homepage.htm">Home</a></li>
+            <!-- dropdown for perspectives options -->
+            <li><a class="lightLink" id="active" href="quiz.htm">Quiz</a></li>
+            <li>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Perspectives</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a class="lightLink" href="historical.htm">Historical</a>
+                        <a class="lightLink" href="transitional.htm">Transitional</a>
+                        <a class="lightLink" href="current.htm">Current</a>
+                        <a class="lightLink" href="future.htm">Future</a>
+                    </div>
+                </div>
+            </li>
+            <li><a class="lightLink" href="about.htm">About</a></li>
+        </ul>
+
+        <section class="containerDark">
+            <div class="contentBlockLong">
+                <span class="heading2">VR Technology</span>
+                <span class="heading1"><span class="blueText">Quiz</span></span>
+                <p>
+                    Now that you have gone through our site, it's time for a quick Quiz!
+                </p>
+                <p>
+                    If you haven't gone through the whole site, don't worry - just wing it ;&rpar; <span class="smallText">it's all multiple choice shhhhh</span>.
+                </p>
+            </div>
+        </section>
+
+    </section>
+
+
+    <section class="containerDark">
+
+        <div class="quiz">
+            <div class="title">
+                <h1>VR Quiz</h1>
+            </div>
+        
+            <div id="quiz-container">
+                <div class="question" id="question1">
+                    <p>1. What was the first patented VR invention?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="The Telesphere Mask"> The Telesphere Mask</label>
+                        <label><input type="radio" name="q1" value="VIDEOPLACE"> VIDEOPLACE</label>
+                        <label><input type="radio" name="q1" value="Headsight"> Headsight</label>
+                        <label><input type="radio" name="q1" value="Sensorama"> Sensorama</label>
+                    </div>
+                </div>
+            
+                <div class="question" id="question2">
+                    <p>2. When was the first headset to implement use of a computer over a camera made?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="1946"> 1946</label>
+                        <label><input type="radio" name="q2" value="1941"> 1941</label>
+                        <label><input type="radio" name="q2" value="1938"> 1938</label>
+                        <label><input type="radio" name="q2" value="1935"> 1935</label>
+                    </div>
+                </div>
+            
+                <div class="question" id="question3">
+                    <p>3.Name the concept that Ivan Sutherland had envisioned for future VR technology.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="The Ultimate Display"> The Ultimate Display</label>
+                        <label><input type="radio" name="q3" value="The Half Dome"> The Half Dome</label>
+                        <label><input type="radio" name="q3" value="The Next Reality"> The Next Reality</label>
+                        <label><input type="radio" name="q3" value="The One-Sided Sphere"> The One-Sided Sphere</label>
+                    </div>
+                </div>
+            
+                <div class="question" id="question4">
+                    <p>4.What organization pioneered the selling of VR headsets and gloves?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="Crystal River Engineering Inc."> Crystal River Engineering Inc.</label>
+                        <label><input type="radio" name="q4" value="VPL Research, Inc."> VPL Research, Inc.</label>
+                        <label><input type="radio" name="q4" value="McDonnell-Douglas Corporation"> McDonnell-Douglas Corporation</label>
+                        <label><input type="radio" name="q4" value="The Virtuality Group"> The Virtuality Group</label>
+                    </div>
+                </div>
+            
+                <div class="question" id="question5">
+                    <p>5.Why did the Nintendo Virtual Boy fail? </p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="Lack of color graphics"> Lack of color graphics</label>
+                        <label><input type="radio" name="q5" value="Lack of software support"> Lack of software support</label>
+                        <label><input type="radio" name="q5" value="Lack of comfort while in use"> Lack of comfort while in use</label>
+                        <label><input type="radio" name="q5" value="All of the above"> All of the above</label>
+                    </div>
+                </div>
+            
+                <button id="submit" onclick="submitQuiz()">Submit</button>
+                <div id="result"></div>
+            </div>
+
+            <div id="quiz-results" style="display: none;">
+            <canvas id="resultsChart"></canvas>
+        </div>
+        </div>
+
+    </section>
+
+    
+    
+
+    <!-- bottom of page -->
+        <section class="containerDark">
+            <div id="siteCredit">
+                <p>This website was <strong>independently built</strong> by Richard Camarillo, Jhayden Poole, Spencer Mctighe, and Adam Ashley.</p>
+            </div>
+
+            <footer>&copy; 2023 <span class="blueText">VR Technology</span></footer>
+        </section>
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- local javascript -->
+    <script src="js/ourScript.js"></script>
+   
+
+</body>
+</html>

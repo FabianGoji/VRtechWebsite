@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Project</title>
+    <!-- bootstrap styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- local styles -->
+    <link rel="stylesheet" href="css/teamStyles.css">
+</head>
+<body>
+    <section class="pageIntro">
+        
+        <ul class="siteNavBar">
+            <!--For current page link, put class="active" in <a> tag except for siteID-->
+            <li id="siteID"><a class="lightLink" href="homepage.htm">Home</a></li>
+            <!-- dropdown for perspectives options -->
+            <li><a class="lightLink" href="quiz.htm">Quiz</a></li>
+            <li>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Perspectives</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a class="lightLink" href="historical.htm">Historical</a>
+                        <a class="lightLink" href="transitional.htm">Transitional</a>
+                        <a class="lightLink" id="active" href="current.htm">Current</a>
+                        <a class="lightLink" href="future.htm">Future</a>
+                    </div>
+                </div>
+            </li>
+            <li><a class="lightLink" href="about.htm">About</a></li>
+        </ul>
+
+        <section class="containerDark">
+            <div class="contentBlockLong">
+                <span class="heading2">VR Technology</span>
+                <span class="heading1"><span class="blueText">Current Perspective</span></span>
+                <p>Learn about the current state of VR technology.</p>
+            </div>
+        </section>
+
+    </section>
+    
+    <section class="containerBlue">
+        <div class="contentBlock">
+            <span class="heading1">Current Stages</span>
+        </div>
+        <!-- carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/current-state.jpg" class="d-block w-100" alt="current stage image" width="800" height="600">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <span class="heading2">Image Title</span>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div> -->
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/current-2.jpg" class="d-block w-100" alt="current stage image" width="800" height="600">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <span class="heading2">Image Title</span>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- carousel end -->
+    </section>
+
+    <section class="containerLight">
+        
+        <div class="contentBlock">
+            <span class="heading1">Where It Is At Today</span>
+        </div>
+
+        <section class="wrapper">
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    With how far VR technology has advanced, it is hardly a surprise that it is being utilized in several 
+                    different fields already. Perhaps the most commonly known application VR has to its name is its role in 
+                    the video game industry. Due to its ability to surround the user in a simulated environment, VR gaming 
+                    has a niche as arguably the most immersive and interactive experiences possible. With improving graphics, 
+                    controls, and higher resolution than ever, (especially with the introduction of Meta Quest 3) VR technology 
+                    continues to have a solid market here.
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/mq 3.jpeg" alt="Meta Quest 3">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    Another common use VR technology has is the ability to shop virtually. By simply wearing the headset, 
+                    users can visit commercial stores, explore the interiors, and purchase products at their leisure, all 
+                    from the comfort of their homes. VR headsets even possess the feature of allowing users to virtually 
+                    try on outfits before purchasing. That specific idea has been replicated for the automotive industry 
+                    as well, allowing users to test drive cars before buying.
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/vr shopping.jpg" alt="vr shopping">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    While VR technology has shown to be greatly beneficial for preparing users for real world experiences 
+                    (even within the realm of healthcare!) and providing the chance to travel to distant places instantly, 
+                    it is not without its downsides. The most prominent of these downsides is the current lack of interest 
+                    in the field. As there is no standard baseline for the development of VR software, it can be incredibly 
+                    costly to create specialized equipment, and without a consistent audience to sell to, this means that VR 
+                    prices remain consistently high. This in turn can lead to turning away even more of the general audience. 
+                    Other flaws include the bulkiness that comes with the hardware and occasional connection issues in the 
+                    software, but these are all issues that are being addressed going forward.
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/vr headset 3.png" alt="vr headset">
+            </div>
+
+        </section>
+
+    </section>
+
+    <section class="containerDark">
+        <div id="siteCredit">
+            <p>This website was <strong>independently built</strong> by Richard Camarillo, Jhayden Poole, Spencer Mctighe, and Adam Ashley.</p>
+        </div>
+
+        <footer>&copy; 2023 <span class="blueText">VR Technology</span></footer>
+
+    </section>
+
+    <!-- boostrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+    <!-- local script -->
+    <script src="js/ourScript.js"></script>
+</body>
+</html>

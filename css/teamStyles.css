@@ -1,0 +1,1098 @@
+/* ------------ general styling for document set-up -------------- */
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+
+    html, body{
+        background-color: rgb(25, 25, 25);
+        font-family: 'Futura', 'Geneva', sans-serif;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        color: rgb(241, 239, 236);
+    }
+
+    a:link{
+        text-decoration: none;
+    }
+    
+    a:visited{
+        text-decoration: none;
+    }
+    
+    a:hover{
+        text-decoration: none;
+    }
+    
+    a:active{
+        text-decoration: none;
+    }
+
+/* --------------- nav bar styling ------------------- */
+
+    .siteNavBar{
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        position: relative;
+        /* overflow: hidden; */
+        padding: 1.5vh 5vw 1.5vh 5vw;
+        background-color: rgb(25, 25, 25);
+        width: 100vw;
+        height: auto;
+    }
+
+    .siteNavBar li, .siteNavBar .dropdown {
+        float: right;
+        font-size: 1.25em;
+        font-weight: 300;
+        font-family: 'Futura', sans-serif;
+    }
+    
+    .siteNavBar li a {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        
+    }
+
+    #siteID{
+        float: left;
+    }
+
+    .siteNavBar li a:not(#active):after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(0, 233, 191);
+        transform-origin: bottom center;
+        transition: transform 0.25s ease-out;
+    }
+
+    .siteNavBar li a:hover:not(#active):after {
+        transform: scaleX(1);
+        transform-origin: bottom center;
+    }
+
+    .dropbtn:not(#active):after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(0, 233, 191);
+        transform-origin: bottom center;
+        transition: transform 0.25s ease-out;
+    }
+
+    .dropbtn:hover:not(#active):after {
+        transform: scaleX(1);
+        transform-origin: bottom center;
+    }
+
+    .darkLink{
+        color: rgb(25, 25, 25);
+    }
+
+    .lightLink{
+        color:rgb(241, 239, 236);
+    }
+
+    #active{
+        color:rgb(0, 233, 191);
+        font-weight: 400;
+    }
+
+    /* li:not(#siteID) #active{
+        font-weight:500;
+    } */
+
+/* -------------- page intro -------------- */
+    .pageIntro{
+        height: auto;
+        width: 100vw;
+        margin: 0;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        vertical-align: center;
+        background-color:rgb(25, 25, 25);
+    }
+
+    #siteIntro{
+        background-image: url("../img/headset\ gif.gif");
+        background-color: rgb(241, 239, 236);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        padding-bottom: 20px;
+    }
+
+    #introBlock{
+        margin: 0;
+        position: absolute;
+        width: auto;
+        bottom: 0%;
+        background-color: rgb(25, 25, 25, .6);
+        padding: 25px 50px;
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    #introImage{
+        margin-left: auto;
+        margin-right: auto;
+        justify-self: center;
+    }
+
+/* -------------------  content container styles ------------------------------ */
+        /* ------- same thing repeated with background color varaitions ---------- */
+    
+    /* .container{
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        align-items: center;
+        align-content: center;
+        vertical-align: middle;
+        height: auto;
+        margin: 0;
+        width: 100vw;
+        padding: 50px 25px 100px 25px;
+        color: rgb(241, 239, 236)
+    } */
+
+    .containerLight{
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        vertical-align: middle;
+        height: auto;
+        margin: 0;
+        width: 100vw;
+        padding: 50px 25px 100px 25px;
+        background-color: rgb(241, 239, 236);
+        color:rgb(25, 25, 25);
+    }
+
+    .containerDark{
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        vertical-align: middle;
+        height: auto;
+        margin: 0;
+        width: 100vw;
+        padding: 50px 25px 100px 25px;
+        background-color: rgb(25, 25, 25);
+        color: rgb(241, 239, 236)
+    }
+
+    .containerGray{
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        vertical-align: middle;
+        height: auto;
+        margin: 0;
+        width: 100vw;
+        padding: 50px 25px 100px 25px;
+        background-color: rgb(72, 70, 70);
+        color: rgb(241, 239, 236)
+    }
+
+    .containerBlue{
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        vertical-align: middle;
+        height: auto;
+        margin: 0;
+        width: 100vw;
+        padding: 50px 25px 100px 25px;
+        background-image: linear-gradient(to bottom right, rgb(53, 104, 94, .6), rgb(25, 25, 25, .4), rgb(53, 104, 94, .6));
+        color: rgb(241, 239, 236)
+    }
+
+/* -------- grid styling --------------- */
+
+.wrapper{
+    margin: auto;
+    display: grid;
+    max-width: 90vw;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    place-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    column-gap: 50px;
+    row-gap: 100px;
+    overflow: hidden;
+}
+
+/* ------------ row styles (if we need row layouts for stuff)---------------------- */
+
+    .rowNoGap{
+        display: flex;
+        flex-flow: row nowrap;
+        /* align-content: center; */
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .rowMediumGap{
+        display: flex;
+        flex-flow: row nowrap;
+        /* align-content: center; */
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        width: 100%;
+        height: auto;
+        gap: 50px;
+    }
+
+    .rowSmallGap{
+        display: flex;
+        flex-flow: row nowrap;
+        /* align-content: center; */
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        width: 100%;
+        height: auto;
+        gap: 25px;
+    }
+
+    .rowBigGap{
+        display: flex;
+        flex-flow: row nowrap;
+        /* align-content: center; */
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        width: 100%;
+        height: auto;
+        gap: 100px;
+    }
+
+/* ---------------- column styles (if we need column layouts) ---------------- */
+
+.colNoGap{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    width: 100vw;
+    height: auto;
+}
+
+.colSmallGap{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    width: 100vw;
+    height: auto;
+    gap: 25px;
+}
+
+.colMediumGap{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    width: 100vw;
+    height: auto;
+    gap: 50px;
+}
+
+.colBigGap{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    width: 100vw;
+    height: auto;
+    gap: 100px;
+}
+
+/* -------------- content blocks (should be used with div elements) ----------------- */
+
+.linkBlockBlue{
+    transition: all .5s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    justify-items: center;
+    align-items: center;
+    justify-self:center;
+    width:auto;
+    height: auto;
+    text-align: center; 
+    background-color: rgb(166, 166, 166); 
+    border: 2px solid rgb(166, 166, 166);
+    border-radius: 10px;
+    color: rgb(241, 239, 236);
+    font-size: 1.25em;
+    font-weight: 400;
+
+}
+
+.linkBlockBlue:hover {
+    border: 2px solid rgb(0, 233, 191);
+    background-color: rgb(0, 233, 191);
+    color: rgb(241, 239, 236);
+    font-weight: 500;
+    transform: scale(1.08);
+}
+
+.contentBlockWrapper{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    
+}
+
+.contentBlock{
+    margin: 20px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    justify-items: center;
+    align-items: center;
+    width: auto;
+    max-width: 50%;
+    height: auto;
+    text-align: left;
+    overflow:hidden;
+}
+
+.contentBlockLong{
+    margin: 20px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    text-align: left;
+    overflow: hidden;
+}
+
+.contentBlockShort{
+    margin: 20px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    justify-items: center;
+    align-items: center;
+    width: 25%;
+    height: auto;
+    text-align: left;  
+}
+
+.titleBlock{
+    margin: 20px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    text-align: center;  
+}
+
+/* ---------- images -------------- */
+    .contentBlock img, .contentBlockLong img, .contentBlockCell img, .contentBlockShort img, .contentBlockWrapper img{
+        border-radius: 20px;
+        padding: 3px;
+        height: auto;
+        width: auto;
+        object-fit: cover;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .contentBlockWrapper img{
+        background-color: rgb(0, 233, 191);
+        padding: 4px;
+        max-width: 600px;
+    }
+
+    .memberPhoto img{
+        height: auto;
+        width: auto;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        align-self: center;
+        justify-self: center;
+        border-radius: 100%;
+        background-color: rgb(0, 233, 191);
+        padding: 4px;
+    }
+
+/* ----------- text styles ------------- */
+    p{
+        font-family: 'Geneva', sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+    }
+    .rightAlign{
+        text-align: right;
+    }
+
+    .leftAlign{
+        text-align: left;
+    }
+
+    .centerAlign{
+        text-align:center;
+    }
+
+    .heading1{
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    .heading2{
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .subheading{
+        display: inline-block;
+        font-size: 1.25em;
+        font-weight: 500;
+        color:rgb(129, 129, 129);
+    }
+
+    .smallText{
+        font-size: .8em;
+        font-weight: 300;
+    }
+
+    .heading1, .heading2, .subheading {
+        font-family:'Futura', sans-serif;
+    }
+
+    .underline{
+        text-decoration: 2px underline;
+        text-underline-offset: 8px;
+    }
+
+    .blueText{
+        color: rgb(0, 233, 191);
+    }
+
+    /* ---------- override of bootstrap styles -------------- */
+
+    .carousel{
+        width: 80vw;
+        height: auto;
+        margin-bottom: 100px;
+        border: 6px solid rgb(0, 233, 191);
+        border-radius: 10px;
+        box-shadow: 10px 15px 20px rgb(25, 25, 25, .8);
+    }
+
+    .carousel-inner img{
+        object-fit: cover;
+    }
+
+    /* ---------- dropdown styles ---------- */
+    
+    .dropdown{
+        display: inline-block;
+        position: relative;
+    }
+    
+    .dropbtn {
+        border: none;
+        cursor: pointer;
+        display:inline-block;
+        position: relative;
+        padding: 14px 16px;
+        background-color: rgb(25, 25, 25);
+        color: rgb(241, 239, 236);
+        font-size: .85em;
+        font-weight: 300;
+        text-align: center;
+        text-decoration: none;
+
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(25, 25, 25);
+        border: 1.5px solid rgb(0, 233, 191);
+        border-radius: 8px;
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        margin-top: 10px;
+        padding: 10px 5px 10px 5px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        font-size: .85em;
+        font-weight: 300;
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    .show {
+        display: block;
+    }
+
+    /* ---------- Hover & scale styling for link images ------------ */
+
+    .startingBlock{
+        display: flex;
+        flex-flow: column wrap;
+        position: relative;
+        margin: 20px 20px 20px 20px;
+        padding: 5px 5px 5px 5px;
+        justify-content: center;
+        max-height: 100vh;
+        max-width: 30%;
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+        vertical-align: center;
+        border-radius: 20px;
+    }
+
+    .fadingBlock{
+        display: flex;
+        flex-flow: column wrap;
+        position: relative;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+        vertical-align: center;
+        border-radius: 20px;
+    }
+
+    .linkImg{
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        border-radius: 20px;
+    }
+
+
+    .fadeInContent{
+        transition: all .5s ease;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .startingBlock:hover .linkImg {
+        transform: scale(1.08);
+        box-shadow: 5px 5px 20px rgb(25, 25, 25, .8)
+      }
+      
+    .startingBlock:hover .fadeInContent {
+        /* top: 50%;
+        left: 50%; */
+        opacity: 1;
+        transform: scale(1.08);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* ---------- Quiz Styles ------------- */
+    
+    .quiz {
+        padding: 50px 200px 50px 200px;
+        font-family: 'Geneva', sans-serif;
+        font-size: 1.2rem;
+        color: rgb(241, 239, 236);
+        background-color: rgb(25, 25, 25);
+        border-radius: 10px;
+        border-style: double;
+        border-width: 20px;
+        border-color:  rgb(0, 233, 191);
+      }
+      
+      
+      .title {
+          font-size: 1.5rem;
+          max-width: 600px;
+          margin: 50px auto;
+          color:  rgb(0, 233, 191);
+          /* text-decoration: underline;
+          text-decoration-color: black; */
+      }
+      
+      #quiz-container {
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      
+      .question {
+        margin-bottom: 20px;
+      }
+      
+      #submit {
+        transition: all .5s ease;
+          background-color: rgb(25, 25, 25);
+          padding: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 1rem;
+          font-weight: 500;
+          color: rgb(0, 233, 191);
+          border: 2px solid rgb(0, 233, 191);
+          border-radius: 8px;
+      }
+      
+      #submit:hover {
+          background-color: rgb(0, 233, 191);
+          color: rgb(241, 239, 236);
+          transform: scale(1.08);
+      }
+      
+      .options label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+/* ----------- Registration Form ------------   */
+    #registerUser {
+        background-color: rgb(241, 239, 236);
+        padding: 20px;
+        border: transparent;
+        border-width: 10px;
+        border-radius: 8px;
+        box-shadow:  rgb(0, 233, 191) 0px 7px 25px 0px;
+        font-size: 1.25rem;
+
+    }
+
+    #registerUser .heading2{
+        color: rgb(25, 25, 25);
+    }
+
+    #registerUser label {
+        display: block;
+        margin: 20px 0 8px;
+        color: black;
+    }
+
+    .registerInput {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        border-width: 2px;
+        box-sizing: border-box;
+    }
+
+    .registerBtn {
+        transition: all .5s ease;
+        border: 2px solid rgb(0, 233, 191);
+        background-color: rgb(241, 239, 236);
+        color: rgb(0, 233, 191);
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.25rem;
+    }
+
+    .registerBtn:hover {
+        border: 2px solid rgb(0, 233, 191);
+        background-color: rgb(0, 233, 191);
+        color: rgb(241, 239, 236);
+    }
+
+    /* ------- modal styling -------- */
+    .modal {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(25, 25, 25, .4);
+        padding-top: 60px;
+    }
+    
+    .modal-content {
+        left: 0;
+        top: 0;
+        background-color: rgb(25, 25, 25);
+        border: 2px solid rgb(0, 233, 191);
+        border-radius: 10px;
+        margin: 10% auto;
+        padding: 2vh 4vw;
+        width: 50vw;
+        height: auto;
+        color: rgb(241, 239, 236);
+    }
+    
+    #modal-footer {
+        text-align: right;
+        color: rgb(241, 239, 236);
+    }
+
+    #modalCloseBtn {
+        color: rgb(241, 239, 236);
+        text-decoration: 2px underline;
+        text-underline-offset: 4px;
+    }
+
+    #modalCloseBtn:hover {
+        color: rgb(0, 233, 191);
+    }
+
+    /* ------ output of name ------ */
+    #output {
+        clear: both;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    /* --------- bottom of page -------- */
+    #siteCredit{
+        display: flex;
+        flex-flow: column wrap;
+        height: auto;
+        width: 100vw;
+        margin: auto;
+        padding: 2.5vh 3vw 2.5vh 3vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        vertical-align: center;
+    }
+
+    #siteCredit p, .myInfo p{
+        color: rgb(241, 239, 236);
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    #siteCredit p strong{
+        font-weight: 500;
+    }
+
+
+    footer{
+        padding: 2vh 5vw 2vh 5vw;
+        color: rgb(241, 239, 236);
+        align-self: start;
+    }
+
+    /* responsive styling */
+
+    @media only screen and (max-width: 600px){
+        body{
+            .wrapper{
+                margin: auto;
+                display: grid;
+                max-width: 300px;
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 3vh;
+            }
+
+            .carousel{
+                width: 300px;
+                border: 6px solid rgb(0, 233, 191);
+                border-radius: 10px;
+                box-shadow: 10px 15px 20px rgb(25, 25, 25, .8);
+            }
+
+            .contentBlockLong, .contentBlock, .contentBlockWrapper, #introBlock{
+                margin: auto;
+                padding: 20px 20px;
+                text-align: center;
+            }
+
+            #introBlock{
+                font-size: .75em;
+            }
+
+            .contentBlock img, .contentBlockWrapper img, .contentBlockLong Img, .memberPhoto img{
+                max-width: 300px;
+            }
+
+            .memberPhoto img {
+                max-height: 300px;
+            }
+
+            .siteNavBar li, .siteNavBar .dropdown {
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+
+            .dropdown-content {
+                font-size: .9em;
+                max-width: 150px;
+                letter-spacing: 1px;
+            }
+
+            .dropbtn {
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+
+            p{
+                font-size: .75em;
+            }
+        
+            .heading1{
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                font-size: 1.25em;
+                letter-spacing: 1px;
+            }
+        
+            .heading2{
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+        
+            .subheading{
+                font-size: .75em;
+                letter-spacing: 1px;
+            }
+            
+            .smallText{
+                font-size: .5em;
+            }
+
+            .quiz {
+                padding: 25px 25px;
+                font-size: .75rem;
+                border-radius: 10px;
+                border-style: double;
+                border-width: 10px;
+                border-color:  rgb(0, 233, 191);
+                max-width: 300px;
+              }
+              
+              
+              .title {
+                  font-size: 1.25rem;
+                  max-width: 300px;
+                  margin: auto;
+              }
+              
+              #quiz-container {
+                max-width: 300px;
+                margin: 0;
+              }
+
+              .question {
+                margin-bottom: 10px;
+              }
+
+              #quiz-container label, #quiz-container p {
+                font-size: .75rem;
+                padding: 0px 0px;
+                margin: 0;
+              }
+
+        }
+    }
+
+    @media only screen and (max-width: 720px){
+        body{
+            .wrapper{
+                margin: auto;
+                display: grid;
+                max-width: 500px;
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 5vh;
+            }
+
+            .carousel{
+                width: 500px;
+                border: 6px solid rgb(0, 233, 191);
+                border-radius: 10px;
+                box-shadow: 10px 15px 20px rgb(25, 25, 25, .8);
+            }
+
+            .contentBlockLong, .contentBlock, .contentBlockWrapper, #introBlock{
+                margin: auto;
+                padding: 25px 25px;
+                text-align: center;
+            }
+
+            #introBlock{
+                font-size: 1em;
+            }
+
+            img{
+                max-width: 500px;
+            }
+
+            .dropdown-content{
+                max-width: 200px;
+            }
+
+            .siteNavBar li, .siteNavBar .dropdown {
+                font-size: 1.15em;
+            }
+
+            p{
+                font-size: 1em;
+            }
+        
+            .heading1{
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                font-size: 1.5em;
+            }
+        
+            .heading2{
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                font-size: 1.25em;
+            }
+        
+            .subheading{
+                font-size: 1em;
+            }
+            
+            .smallText{
+                font-size: .6em;
+            }
+
+        }
+    }
+
+    @media only screen and (max-width: 1200px){
+        body{
+            .wrapper{
+                margin: auto;
+                display: grid;
+                max-width: 600px;
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 5vh;
+            }
+
+            .carousel{
+                width: 600px;
+                border: 6px solid rgb(0, 233, 191);
+                border-radius: 10px;
+                box-shadow: 10px 15px 20px rgb(25, 25, 25, .8);
+            }
+
+            .contentBlockLong, .contentBlock, .contentBlockWrapper, #introBlock{
+                margin: auto;
+                padding: 20px 20px;
+            }
+
+            .dropdown-content{
+                max-width: 200px;
+            }
+
+            #introBlock{
+                font-size: 1em;
+            }
+
+            p{
+                font-size: 1em;
+            }
+        
+            .heading1{
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                font-size: 1.75em;
+            }
+        
+            .heading2{
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                font-size: 1.5em;
+            }
+        
+            .subheading{
+                font-size: 1em;
+            }
+
+        }
+    }

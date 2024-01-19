@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Project</title>
+    <!-- bootstrap styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- local styles -->
+    <link rel="stylesheet" href="css/teamStyles.css">
+</head>
+<body>
+    <section class="pageIntro">
+        
+        <ul class="siteNavBar">
+            <!--For current page link, put class="active" in <a> tag except for siteID-->
+            <li id="siteID"><a class="lightLink" href="homepage.htm">Home</a></li>
+            <!-- dropdown for perspectives options -->
+            <li><a class="lightLink" href="quiz.htm">Quiz</a></li>
+            <li>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Perspectives</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a class="lightLink" href="historical.htm">Historical</a>
+                        <a class="lightLink" id="active" href="transitional.htm">Transitional</a>
+                        <a class="lightLink" href="current.htm">Current</a>
+                        <a class="lightLink" href="future.htm">Future</a>
+                    </div>
+                </div>
+            </li>
+            <li><a class="lightLink" href="about.htm">About</a></li>
+        </ul>
+
+        <section class="containerDark">
+            <div class="contentBlockLong">
+                <span class="heading2">VR Technology</span>
+                <span class="heading1"><span class="blueText">Transitional Perspective</span></span>
+                <p>
+                    Learn about the major changes that made VR Technology begin to change.
+                </p>
+            </div>
+        </section>
+
+    </section>
+    
+    <section class="containerBlue">
+        <div class="contentBlock">
+            <span class="heading1">Tansitional Stages</span>
+        </div>
+        <!-- carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/ultimate-display-vr (1).jpg" class="d-block w-100" alt="transitional stage image" width="800" height="600">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <span class="heading2">Image Title</span>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div> -->
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/transitional-2.jpg" class="d-block w-100" alt="transitional stage image" width="800" height="600">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <span class="heading2">Image Title</span>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- carousel end -->
+    </section>
+
+    <section class="containerLight">
+        
+        <div class="contentBlock">
+            <span class="heading1">How It Transitioned</span>
+        </div>
+
+        <section class="wrapper">
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    With a baseline established, the potential for VR became more widely recognized, and more 
+                    improvements were being made every other year.
+                </p>
+                <p class="leftAlign">
+                    Following the decline of the Sensorama, Heilig returned with another attempt in 1960, patenting the 
+                    Telesphere Mask as the first head-mounted display (HMD). While this model came with stereoscopic 3D 
+                    wide vision and stereo sound, motion-tracking was not available in headset form until the introduction 
+                    of Headsight a year later. Created by Bryan and Comeau of the Philco Corporation, Headsight additionally 
+                    featured built-in screens for the individual eyes and a head-tracking system that utilized a remote 
+                    camera to track motion, though it was used more for military use over VR ventures.
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/headsght.png" alt="headsight">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    The next big step for VR came in 1965, when computer scientist Ivan Sutherland published what 
+                    he called the Ultimate Display. The premise of his Ultimate Display was to create a headset 
+                    capable of replicating a reality indistinguishable from our own. This would be achieved not only 
+                    by utilizing 3D sound and tactile sensations in real time, but also giving users the ability to 
+                    interact with the virtual world as realistically as possible. In this way, the Ultimate Display 
+                    became the blueprint for most following VR inventions. 
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/ultimate-display-vr (1).jpg" alt="">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    With the Ultimate Display in circulation, inventors were eager to prove themselves. The most 
+                    critical of these was perhaps The Sword of Damocles in 1968, created by Sutherland and his student 
+                    Bob Sproull. This giant, ceiling-hanging contraption was the first to implement a computer rather 
+                    than a camera, requiring the user to be strap in before use. While it was too heavy to reasonably 
+                    mass produce, it was able to produce wire frame shapes with ease, a novelty at the time. 
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/sword damo.jpeg" alt="Sword of Damocles ">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    From there, Myron Krueger set the basis for VIDEOPLACE technology with a series of “artificial reality” 
+                    experiences. Starting in 1969, these projects were developed primarily using video systems. This cumulated 
+                    with the unveiling of Krueger’s VIDEOPLACE at the Milwaukee Art Center in 1975. As the first interactive 
+                    VR platform, it used a variety of tech such as projectors, graphics, video displays and cameras to surround 
+                    the user and generate silhouettes that copied their movements, even allowing these silhouettes to interact 
+                    with one another virtually. VIDEOPLACE was unique in that it didn’t require any gloves or goggles.
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/videoplace.webp" alt="videoplace">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    Created using snapshots from a car driving in the city, Aspen Movie Map allowed users to explore Aspen City 
+                    virtually. Made by MIT in 1977, it also used no headset and instill the dream of using VR to view far away 
+                    locations. McDonnell-Douglas Corporation integrated this idea for military use with their VITAL Helmet in 
+                    1979. Instead of a camera lens, the VR software would track the pilot’s eye movements to generate images. 
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/vital headset.jpeg" alt="VITAL helmet">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    The creation of the first wired gloves is attributed to Sandin and Defanti in 1982, who dubbed their 
+                    creations ‘sayre gloves’. It incorporated gesture recognition into the realm of VR by converting finger 
+                    movements into electrical signals. Similar technology was then developed by VPL Research, Inc., who also 
+                    became the first to sell VR goggles and gloves in 1985.
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/sayre glove.jpg" alt="sayre glove">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    Entering the realm of video games, Nintendo stepped into the fray of VR with the Virtual Boy Console in 1995, 
+                    becoming the first portable console with 3D graphics. It was no commercial success, however, as user voiced 
+                    dissatisfaction with the lack of software, color, and issues with comfort. It was discontinued and replaced 
+                    with the VFX1 Headgear by Forte a year later.
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/virtual boy.jpeg" alt="virtual boy">
+            </div>
+
+            <div class="contentBlockWrapper">
+                <p class="leftAlign">
+                    2014 was the year that VR technology starting really taking off, with Facebook’s purchase of Oculus VR for $2 
+                    billion dollars. Suddenly several major brands starting taking action to have a hand in the new market, with 
+                    Google releasing the Cardboard (stereoscopic viewer for smartphones), Sony announcing Project Morpheus 
+                    (PS4 VR headset), and Samsung revealing the Samsung Gear VR (headset that directly worked in tandem with a 
+                    Samsung Galaxy smartphone). From there, it was only a matter of time before more people jumped in…
+                </p>
+            </div>
+            <div class="contentBlockWrapper">
+                <img src="img/different headsets.webp" alt="multiple headsets">
+            </div>
+
+        </section>
+
+    </section>
+
+    <section class="containerDark">
+        <div id="siteCredit">
+            <p>This website was <strong>independently built</strong> by Richard Camarillo, Jhayden Poole, Spencer Mctighe, and Adam Ashley.</p>
+        </div>
+
+        <footer>&copy; 2023 <span class="blueText">VR Technology</span></footer>
+
+    </section>
+
+    <!-- boostrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+    <!-- local script -->
+    <script src="js/ourScript.js"></script>
+</body>
+</html>
